@@ -3,36 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal do RPG</title>
+    <title>Protocolo Mortuus</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="tela-entrada">
-        <h1>⚔️ Portal da Aventura ⚔️</h1>
-        <p>Insira os dados do seu herói para cruzar os portões.</p>
+    <!-- Espiral giratória de fundo -->
+    <div class="espiral-fundo"></div>
 
-        <!-- Formulário de Entrada -->
-        <form id="form-entrada">
-            <div class="campo">
-                <label for="nome">Nome do Personagem:</label>
-                <input type="text" id="nome" placeholder="Ex: Aragorn, Jinx..." required>
-</div>
+    <!-- Efeito de Névoa na parte inferior -->
+    <div class="nevoa-abaixo"></div>
 
-            <div class="campo">
-                <label for="classe">Escolha sua Classe:</label>
-                <select id="classe" required>
-                    <option value="" disabled selected>Selecione...</option>
-                    <option value="Guerreiro">🛡️ Guerreiro (Força e Defesa)</option>
-                    <option value="Mago">🔮 Mago (Magia e Conhecimento)</option>
-                    <option value="Ladino">🗡️ Ladino (Agilidade e Furtividade)</option>
-                    <option value="Clérigo">✨ Clérigo (Cura e Fé)</option>
-                </select>
-            </div>
+    <!-- BARRA LATERAL (Esquerda) -->
+    <aside class="barra-lateral">
+        <div class="logo-barra">📁 ARQUIVOS</div>
+        <nav class="menu-funcoes">
+            <button class="btn-menu" onclick="alert('Abrindo Catálogo de Monstros...')">☣️ Monstros</button>
+            <button class="btn-menu" onclick="alert('Abrindo Arquivo de Personagens...')">👥 Personagens</button>
+            <button class="btn-menu" onclick="alert('Abrindo Grimório de Rituais...')">📿 Rituais</button>
+        </nav>
+    </aside>
 
-            <button type="submit" id="btn-entrar">Iniciar Jornada</button>
-        </form>
-    </div>
+    <!-- CONTEÚDO PRINCIPAL (Centralizado) -->
+    <main class="conteudo-principal">
+        <div class="tela-inicio">
+            <h1 class="titulo-principal">PROTOCOLO MORTUUS</h1>
+            <p class="subtitulo">Santo eterno berço, vive</p>
+        </div>
+    </main>
 
 </body>
 </html>
