@@ -1,0 +1,122 @@
+body {
+    background-color: #000000; /* Fundo totalmente preto */
+    color: #ffffff; /* Texto estritamente branco */
+    font-family: 'Courier New', Courier, monospace; /* Estilo terminal/investigativo */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+/* Espiral Giratória do Outro Lado */
+.espiral-fundo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 600px;
+    margin-top: -300px;
+    margin-left: -300px;
+    background-image: url('https://icons8.com'); /* Ícone de espiral branca */
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.05; /* Quase transparente */
+    pointer-events: none; /* Não atrapalha os cliques */
+    animation: girarEspiral 40s linear infinite;
+    z-index: 1;
+}
+
+@keyframes girarEspiral {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Efeito de Névoa na parte inferior */
+.nevoa-abaixo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+   width: 100%;
+    height: 150px;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Barra Lateral Esquerda */
+.barra-lateral {
+    width: 250px;
+    background-color: rgba(10, 10, 10, 0.95);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+.logo-barra {
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.7);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+}
+
+.menu-funcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn-menu {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    padding: 12px;
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-menu:hover {
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Área de Conteúdo Principal */
+.conteudo-principal {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+}
+
+/* Centralização do Título */
+.tela-inicio {
+    text-align: center;
+}
+
+.titulo-principal {
+    font-size: 42px;
+    letter-spacing: 8px;
+    margin: 0 0 10px 0;
+    font-weight: 900;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.subtitulo {
+    font-size: 16px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+}
